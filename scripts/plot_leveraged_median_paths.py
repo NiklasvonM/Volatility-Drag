@@ -24,7 +24,7 @@ scenarios = [
     # Scenario(volatility=0.20, expected_return=0.12),  # High volatility, high return
 ]
 
-leverage_factors: list[float] = [0.5, 1.0, 2.0]
+leverage_factors: list[float] = [1.0, 2.0]
 
 
 def generate_path(volatility: float, expected_return: float, leverage: float) -> list[float]:
@@ -71,7 +71,7 @@ def main() -> None:
 
     plt.gca().xaxis.set_major_formatter(mdates.DateFormatter("%Y-%m-%d"))
     plt.gca().xaxis.set_major_locator(mdates.AutoDateLocator())
-    plt.ylim(bottom=0, top=min(plt.ylim()[1], 2.0 * initial_value))
+    plt.ylim(bottom=0, top=min(plt.ylim()[1], 3.0 * initial_value))
     plt.title("Simulated Asset Prices (Median Paths in Bold)")
     plt.xlabel("Date")
     plt.ylabel("Asset Price")
