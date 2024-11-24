@@ -74,7 +74,7 @@ def main() -> None:
     ax.set_xticks(expected_returns)
     ax.set_yticks(volatilities)
     ax.set_xlabel("Expected Annual Return")
-    ax.set_ylabel("Annual Volatility")
+    ax.set_ylabel("Volatility")
     plt.title(
         f"Effect of Leverage ({leverage_factor:.1f}x) on Median Final Value\n"
         f"({n_years} years, {number_paths} simulations each)"
